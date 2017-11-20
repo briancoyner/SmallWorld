@@ -1,5 +1,9 @@
 # iOS 11 Map View Clustering Bugs
 
+## Bug Report ID
+
+rdar://problem/35647724
+
 ## Selected annotation should remain visible (should never be clustered)
 
 Steps to reproduce
