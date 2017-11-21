@@ -4,6 +4,10 @@
 
 rdar://problem/35647724
 
+## Screenshot
+
+![screenshot](screenshot.png)
+
 ## Selected annotation should remain visible (should never be clustered)
 
 Steps to reproduce
