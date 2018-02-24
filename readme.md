@@ -4,6 +4,8 @@
 
 rdar://problem/35647724
 
+Affects: Xcode 9 through Xcode 9.3 beta 3
+
 ## Screenshot
 
 ![screenshot](screenshot.png)
