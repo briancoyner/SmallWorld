@@ -7,6 +7,8 @@ import Foundation
 import UIKit
 import MapKit
 
+/// See the `readme` file for different testing scenarios.
+
 final class MapViewController: UIViewController, MKMapViewDelegate {
 
     private lazy var annotations: [MKAnnotation] = self.lazyMagicKingdomAnnotations()
@@ -104,13 +106,13 @@ extension MapViewController {
         // - This hack looks to see if the selected annotation is part of the current cluster.
         // - If the selected annotation is not part of the cluster, then force re-select the annotation.
         //
-        // This hack should not be necessary because MapKit should always ensure that a selected annotation is always visible
+        // This hack should not be necessary because MapKit, in my opinion, should always ensure that a selected annotation is always visible
         // regardless of the clustering identifier, display priority, etc.
         //
 
         if let selectedAnnotation = mapView.selectedAnnotations.first {
             if let selectedAnnotationVew = mapView.view(for: selectedAnnotation) {
-                print("    Cluster ID: \(selectedAnnotationVew.clusteringIdentifier ?? "uhhh... why is this clustered then?")")
+                print("    Cluster ID: \(selectedAnnotationVew.clusteringIdentifier ?? "uhhh... why is this clustered?")")
                 print("      Priority: \(selectedAnnotationVew.displayPriority)")
             }
 

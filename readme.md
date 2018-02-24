@@ -1,5 +1,13 @@
 # iOS 11 Map View Clustering Bugs
 
+## Bug Report ID
+
+rdar://problem/35647724
+
+## Screenshot
+
+![screenshot](screenshot.png)
+
 ## Selected annotation should remain visible (should never be clustered)
 
 Steps to reproduce
@@ -49,8 +57,8 @@ I have tried various ways to work around the issues. My workarounds either just 
   
 Things I tried that I thought might work, but did not work:
 - setting the selected annotation view `clusteringIdentifier` to `nil`.
-  - this usually ends up crash MapKit.
-- setting the selected annotation's `displayPriority` to `.required`.
+  - this usually ends up crashing MapKit.
+- setting the selected annotation's `displayPriority` to `.required` (while all other annotations had a lower priority).
   
 # In Summary
   
