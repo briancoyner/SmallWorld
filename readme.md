@@ -4,7 +4,7 @@
 
 rdar://problem/35647724
 
-Affects: Xcode 9 through Xcode 10 beta 5
+Affects: Xcode 9 through Xcode 10 beta 6
 
 ## Screenshot
 
