@@ -11,8 +11,8 @@ import MapKit
 
 final class MapViewController: UIViewController, MKMapViewDelegate {
 
-    private lazy var annotations: [MKAnnotation] = self.lazyMagicKingdomAnnotations()
-    private lazy var mapView: MKMapView = self.lazyMapView()
+    fileprivate lazy var annotations = self.lazyMagicKingdomAnnotations()
+    fileprivate lazy var mapView = self.lazyMapView()
 }
 
 extension MapViewController {
