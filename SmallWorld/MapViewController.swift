@@ -98,7 +98,7 @@ extension MapViewController {
 
 extension MapViewController {
 
-    private func applyHackToForceSelectedAnnotationToAppearSelected(whenNotIncludedIn memberAnnotations: [MKAnnotation]) {
+    fileprivate func applyHackToForceSelectedAnnotationToAppearSelected(whenNotIncludedIn memberAnnotations: [MKAnnotation]) {
 
         //
         // What is this hack?
@@ -127,7 +127,7 @@ extension MapViewController {
 extension MapViewController {
 
     @objc
-    private func selectAnnotation() {
+    fileprivate func selectAnnotation() {
         // In our test set, the first annotation is "It's A Small World".
         // So any testing you do with the "Select" toolbar button is always
         // focused on this one annotation.
@@ -136,7 +136,7 @@ extension MapViewController {
     }
 
     @objc
-    private func deselectAnnotation() {
+    fileprivate func deselectAnnotation() {
         guard let annotation = mapView.selectedAnnotations.first else {
             return
         }
@@ -147,7 +147,7 @@ extension MapViewController {
 
 extension MapViewController {
 
-    private func showToolbarWithDemoButtons() {
+    fileprivate func showToolbarWithDemoButtons() {
         setToolbarItems([
             UIBarButtonItem(title: "Select", style: .plain, target: self, action: #selector(selectAnnotation)),
             UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
@@ -160,7 +160,7 @@ extension MapViewController {
 
 extension MapViewController {
 
-    private func lazyMapView() -> MKMapView {
+    fileprivate func lazyMapView() -> MKMapView {
         let view = MKMapView()
         view.translatesAutoresizingMaskIntoConstraints = false
 
@@ -178,7 +178,7 @@ extension MapViewController {
 
 extension MapViewController {
 
-    private func lazyMagicKingdomAnnotations() -> [MKAnnotation] {
+    fileprivate func lazyMagicKingdomAnnotations() -> [MKAnnotation] {
         return [
             makeAnnotation(
                 withTitle: "It's a Small World",
@@ -207,7 +207,7 @@ extension MapViewController {
         ]
     }
 
-    private func makeAnnotation(withTitle title: String, coordinate: CLLocationCoordinate2D) -> RideAnnotation {
+    fileprivate func makeAnnotation(withTitle title: String, coordinate: CLLocationCoordinate2D) -> RideAnnotation {
         let annotation = RideAnnotation()
         annotation.coordinate = coordinate
         annotation.title = title

@@ -1,10 +1,10 @@
-# iOS 11 Map View Clustering Bugs
+# iOS 11/12 Map View Clustering Bugs
 
 ## Bug Report ID
 
 rdar://problem/35647724
 
-Affects: Xcode 9 through Xcode 10.1 (iOS 12.1)
+Affects: Xcode 9 through Xcode 10.2 (iOS 12.2)
 
 ## Screenshot
 
