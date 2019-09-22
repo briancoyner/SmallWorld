@@ -11,8 +11,8 @@ import MapKit
 
 final class MapViewController: UIViewController, MKMapViewDelegate {
 
-    fileprivate lazy var annotations = self.lazyMagicKingdomAnnotations()
-    fileprivate lazy var mapView = self.lazyMapView()
+    private lazy var annotations = lazyMagicKingdomAnnotations()
+    private lazy var mapView = lazyMapView()
 }
 
 extension MapViewController {
@@ -98,7 +98,7 @@ extension MapViewController {
 
 extension MapViewController {
 
-    fileprivate func applyHackToForceSelectedAnnotationToAppearSelected(whenNotIncludedIn memberAnnotations: [MKAnnotation]) {
+    private func applyHackToForceSelectedAnnotationToAppearSelected(whenNotIncludedIn memberAnnotations: [MKAnnotation]) {
 
         //
         // What is this hack?
@@ -127,7 +127,7 @@ extension MapViewController {
 extension MapViewController {
 
     @objc
-    fileprivate func selectAnnotation() {
+    private func selectAnnotation() {
         // In our test set, the first annotation is "It's A Small World".
         // So any testing you do with the "Select" toolbar button is always
         // focused on this one annotation.
@@ -136,7 +136,7 @@ extension MapViewController {
     }
 
     @objc
-    fileprivate func deselectAnnotation() {
+    private func deselectAnnotation() {
         guard let annotation = mapView.selectedAnnotations.first else {
             return
         }
@@ -147,7 +147,7 @@ extension MapViewController {
 
 extension MapViewController {
 
-    fileprivate func showToolbarWithDemoButtons() {
+    private func showToolbarWithDemoButtons() {
         setToolbarItems([
             UIBarButtonItem(title: "Select", style: .plain, target: self, action: #selector(selectAnnotation)),
             UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
@@ -160,7 +160,7 @@ extension MapViewController {
 
 extension MapViewController {
 
-    fileprivate func lazyMapView() -> MKMapView {
+    private func lazyMapView() -> MKMapView {
         let view = MKMapView()
         view.translatesAutoresizingMaskIntoConstraints = false
 
@@ -168,7 +168,6 @@ extension MapViewController {
         view.showsUserLocation = true
         view.showsTraffic = false
         view.showsBuildings = true
-        view.showsPointsOfInterest = true
 
         view.delegate = self
 
@@ -178,7 +177,7 @@ extension MapViewController {
 
 extension MapViewController {
 
-    fileprivate func lazyMagicKingdomAnnotations() -> [MKAnnotation] {
+    private func lazyMagicKingdomAnnotations() -> [MKAnnotation] {
         return [
             makeAnnotation(
                 withTitle: "It's a Small World",
@@ -207,7 +206,7 @@ extension MapViewController {
         ]
     }
 
-    fileprivate func makeAnnotation(withTitle title: String, coordinate: CLLocationCoordinate2D) -> RideAnnotation {
+    private func makeAnnotation(withTitle title: String, coordinate: CLLocationCoordinate2D) -> RideAnnotation {
         let annotation = RideAnnotation()
         annotation.coordinate = coordinate
         annotation.title = title
