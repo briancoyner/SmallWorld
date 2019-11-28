@@ -4,7 +4,7 @@
 
 rdar://problem/35647724
 
-Affects: Xcode 9 through Xcode 11 (iOS 13.1)
+Affects: Xcode 9 through Xcode 11 (iOS 13.2)
 
 ## Screenshot
 
