@@ -2,9 +2,9 @@
 
 ## Bug Report ID
 
-rdar://problem/35647724
+FB5438133
 
-Affects: Xcode 9 through Xcode 11 (iOS 13.2)
+Affects: Xcode 9 through Xcode 12 (iOS 14)
 
 ## Screenshot
 
