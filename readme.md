@@ -4,7 +4,7 @@
 
 FB5438133
 
-Affects: Xcode 9 through Xcode 12 (iOS 14)
+Affects: Xcode 9 through Xcode 13 (iOS 15)
 
 ## Screenshot
 
