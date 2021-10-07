@@ -164,10 +164,10 @@ extension MapViewController {
         let view = MKMapView()
         view.translatesAutoresizingMaskIntoConstraints = false
 
-        view.mapType = .satellite
+        view.mapType = .standard
         view.showsUserLocation = true
-        view.showsTraffic = false
-        view.showsBuildings = true
+//        view.showsTraffic = false
+//        view.showsBuildings = true
 
         view.delegate = self
 

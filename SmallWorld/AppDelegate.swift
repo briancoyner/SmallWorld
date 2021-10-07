@@ -17,7 +17,6 @@ extension AppDelegate {
         let mainViewController = MapViewController()
         window?.rootViewController = UINavigationController(rootViewController: mainViewController)
         window?.makeKeyAndVisible()
-
         return true
     }
 }
