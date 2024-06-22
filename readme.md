@@ -1,10 +1,10 @@
-# iOS 11/12/13/14/15 Map View Clustering Bugs
+# iOS 11/12/13/14/15/16/17/18 Map View Clustering Bugs
 
 ## Bug Report ID
 
 FB5438133
 
-Affects: Xcode 9 through Xcode 13.3 (iOS 15)
+Affects: Xcode 9 (iOS 11) through Xcode 16 (iOS 18)
 
 ## Screenshot
 

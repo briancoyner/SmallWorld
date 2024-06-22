@@ -111,9 +111,9 @@ extension MapViewController {
         //
 
         if let selectedAnnotation = mapView.selectedAnnotations.first {
-            if let selectedAnnotationVew = mapView.view(for: selectedAnnotation) {
-                print("    Cluster ID: \(selectedAnnotationVew.clusteringIdentifier ?? "uhhh... why is this clustered?")")
-                print("      Priority: \(selectedAnnotationVew.displayPriority)")
+            if let selectedAnnotationView = mapView.view(for: selectedAnnotation) {
+                print("    Cluster ID: \(selectedAnnotationView.clusteringIdentifier ?? "uhhh... why is this clustered?")")
+                print("      Priority: \(selectedAnnotationView.displayPriority)")
             }
 
             if memberAnnotations.contains(where: { $0 === selectedAnnotation }) == false {
@@ -165,10 +165,6 @@ extension MapViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
 
         view.mapType = .standard
-        view.showsUserLocation = true
-//        view.showsTraffic = false
-//        view.showsBuildings = true
-
         view.delegate = self
 
         return view
